@@ -1,3 +1,5 @@
+<p id="notice"><%= notice %></p>
+
 <h1>Portfolio items</h1>
 
 <%= link_to 'Create Portfolio', new_portfolio_path %>
@@ -8,6 +10,7 @@
 
   <%= image_tag item.thumb_image unless item.thumb_image.nil? %>
   <%= link_to 'Edit', edit_portfolio_path(item) %>
+  <%= link_to 'Delete', item, method: :delete, data: { confirm: 'Are you sure?' } %>
 <% end %>
 
 <%= link_to 'Create Portfolio', new_portfolio_path %>
