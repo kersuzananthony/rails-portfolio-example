@@ -20,5 +20,7 @@
     <% end %>
 
     <%= yield %>
+
+    <p><%= "Thank you for visiting me from #{session[:source]}" unless session[:source].nil? %></p>
   </body>
 </html>
