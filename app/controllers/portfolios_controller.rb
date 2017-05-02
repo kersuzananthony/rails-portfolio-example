@@ -33,6 +33,7 @@ class PortfoliosController < ApplicationController
 
   # GET /portfolios/:id/edit
   def edit
+    3.times { @portfolio_item.technologies.build }
   end
 
   # PATCH/PUT /portfolios/:id

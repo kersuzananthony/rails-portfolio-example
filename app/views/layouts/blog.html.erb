@@ -22,7 +22,7 @@
 
 <%= yield %>
 
-<%= render 'shared/navigation' %>
+<%= render 'shared/navigation', location: 'bottom' %>
 
 <p><%= "Thank you for visiting me from #{session[:source]}" unless session[:source].nil? %></p>
 </body>
