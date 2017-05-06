@@ -12,6 +12,7 @@ class BlogsController < ApplicationController
   # GET /blogs/1
   # GET /blogs/1.json
   def show
+    puts ''
   end
 
   # GET /blogs/new
