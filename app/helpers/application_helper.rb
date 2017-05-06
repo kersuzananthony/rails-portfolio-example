@@ -17,7 +17,8 @@ module ApplicationHelper
   end
 
   def copyright_generator
-    KersuzanViewTool::Renderer.copyright 'Kersuzan Anthony', 'All rights reserved'
+    copyright = KersuzanViewTool::Renderer.copyright 'Kersuzan Anthony', 'All rights reserved'
+    content_tag :p, copyright
   end
 
 end
