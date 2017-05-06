@@ -11,16 +11,19 @@
   </head>
 
   <body>
-    <%= render 'shared/navigation', location: 'top' %>
-    <%= login_helper %>
+    <div class="site-wrapper">
+      <div class="site-wrapper-inner">
+        <div class="cover-container">
+          <%= render 'shared/application_nav', location: 'top' %>
+          <%= login_helper %>
 
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+          <%= yield %>
 
-    <%= yield %>
+          <%= source_helper %>
 
-    <%= source_helper %>
-
-    <%= copyright_generator %>
+          <%= copyright_generator %>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
