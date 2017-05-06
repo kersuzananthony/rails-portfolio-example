@@ -59,3 +59,5 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'kersuzan_view_tool', git: 'https://github.com/kersuzananthony/kersuzan_view_tool'
+
+gem 'petergate', '~> 1.7'
