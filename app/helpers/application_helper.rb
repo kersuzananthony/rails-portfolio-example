@@ -10,4 +10,10 @@ module ApplicationHelper
     end
   end
 
+  def source_helper
+    if session[:source]
+      content_tag(:p, "Thank you for visiting me from #{session[:source]}")
+    end
+  end
+
 end
