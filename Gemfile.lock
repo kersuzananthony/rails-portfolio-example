@@ -1,3 +1,9 @@
+GIT
+  remote: https://github.com/kersuzananthony/kersuzan_view_tool
+  revision: e6ee84548bcd5851ae1a9880ab953a2a3eff95bc
+  specs:
+    kersuzan_view_tool (0.1.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -180,6 +186,7 @@ DEPENDENCIES
   friendly_id (~> 5.1.0)
   jbuilder (~> 2.5)
   jquery-rails
+  kersuzan_view_tool!
   listen (~> 3.0.5)
   pg (~> 0.18)
   puma (~> 3.0)

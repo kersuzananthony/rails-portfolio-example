@@ -16,4 +16,8 @@ module ApplicationHelper
     end
   end
 
+  def copyright_generator
+    KersuzanViewTool::Renderer.copyright 'Kersuzan Anthony', 'All rights reserved'
+  end
+
 end
