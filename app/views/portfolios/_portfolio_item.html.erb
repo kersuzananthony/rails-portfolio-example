@@ -1,6 +1,7 @@
-<p><%= link_to item.title, portfolio_path(item) %></p>
-<p><%= item.subtitle %></p>
-
-<%= image_tag item.thumb_image unless item.thumb_image.nil? %>
-<%= link_to 'Edit', edit_portfolio_path(item) if logged_in?(:site_admin) %>
-<%= link_to 'Delete', item, method: :delete, data: { confirm: 'Are you sure?' } if logged_in?(:site_admin) %>
+<div class="card">
+  <%= image_tag item.thumb_image unless item.thumb_image.nil? %>
+  <p class="card-text">
+    <span><%= link_to item.title, portfolio_path(item) %></span>
+    <%= item.subtitle %>
+  </p>
+</div>
