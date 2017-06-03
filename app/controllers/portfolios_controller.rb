@@ -6,7 +6,7 @@ class PortfoliosController < ApplicationController
 
   # Authorization
   access all: [:show, :index],
-         user: {except: [:toggle_status, :destroy, :new, :create, :edit, :update]},
+         user: {except: [:toggle_status, :destroy, :new, :create, :edit, :update, :sort]},
          site_admin: :all
 
   def index
