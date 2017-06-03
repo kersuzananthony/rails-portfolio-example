@@ -4,7 +4,7 @@ Rails.application.routes.draw do
       sign_out: 'logout',
       sign_up: 'register'
   }
-  resources :portfolios, except: [:show] do
+  resources :portfolios do
     put :sort, on: :collection
   end
   resources :blogs do
