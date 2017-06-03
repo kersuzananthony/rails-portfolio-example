@@ -43,6 +43,8 @@ gem 'bootstrap', '~> 4.0.0.alpha6'
 
 gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.2'
 
+gem 'jquery-ui-rails'
+
 gem 'kaminari', '~> 1.0', '>= 1.0.1'
 
 group :development, :test do
