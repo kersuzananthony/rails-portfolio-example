@@ -9,6 +9,10 @@ class Portfolio < ApplicationRecord
   # Hooks
   after_initialize :set_defaults
 
+  # Uploader
+  mount_uploader :thumb_image, PortfolioUploader
+  mount_uploader :main_image, PortfolioUploader
+
   # Validation
   validates_presence_of :title, :body, :main_image, :thumb_image
 
