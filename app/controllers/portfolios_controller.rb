@@ -27,7 +27,6 @@ class PortfoliosController < ApplicationController
 
   def new
     @portfolio_item = Portfolio.new
-    3.times { @portfolio_item.technologies.build }
   end
 
   # POST /portfolios
@@ -48,7 +47,6 @@ class PortfoliosController < ApplicationController
 
   # GET /portfolios/:id/edit
   def edit
-    3.times { @portfolio_item.technologies.build }
   end
 
   # PATCH/PUT /portfolios/:id
@@ -79,6 +77,11 @@ class PortfoliosController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def portfolio_params
-      params.require(:portfolio).permit(:title, :subtitle, :body, :thumb_image, :main_image, :technologies_attributes => [:name])
+      params.require(:portfolio).permit(:title,
+                                        :subtitle,
+                                        :body,
+                                        :thumb_image,
+                                        :main_image,
+                                        :technologies_attributes => [:name, :id, :_destroy])
     end
 end
