@@ -4,7 +4,9 @@ Rails.application.routes.draw do
       sign_out: 'logout',
       sign_up: 'register'
   }
-  resources :portfolios
+  resources :portfolios, except: [:show] do
+    put :sort, on: :collection
+  end
   resources :blogs do
     member do
       get :toggle_status, to: 'blogs#toggle_status'
