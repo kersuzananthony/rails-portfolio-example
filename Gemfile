@@ -51,6 +51,7 @@ gem 'carrierwave', '~> 1.1'
 gem 'carrierwave-aws', '~> 1.1'
 gem 'mini_magick', '~> 4.7'
 gem 'dotenv-rails', '~> 2.2', '>= 2.2.1'
+gem 'twitter', '~> 6.1'
 
 gem 'cocoon', '~> 1.2', '>= 1.2.10'
 gem 'gritter', '~> 1.2'

@@ -18,5 +18,6 @@
 
 # IDE
 .idea/
+.env
 
 public/uploads
