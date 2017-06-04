@@ -1,7 +1,7 @@
 class BlogsController < ApplicationController
   layout 'blog'
 
-  before_action :set_blog, only: [:show, :edit, :update, :destroy, :toggle_status]
+  before_action :set_blog, only: [:edit, :update, :destroy, :toggle_status]
   access all: [:show, :index],
          user: {except: [:toggle_status, :destroy, :new, :create, :edit, :update]},
          site_admin: :all
@@ -15,7 +15,8 @@ class BlogsController < ApplicationController
   # GET /blogs/1
   # GET /blogs/1.json
   def show
-    puts ''
+    @blog = Blog.includes(:comments).friendly.find(params[:id])
+    @comment = Comment.new
   end
 
   # GET /blogs/new
