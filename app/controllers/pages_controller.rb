@@ -9,6 +9,6 @@ class PagesController < ApplicationController
   end
 
   def tech_news
-    @tweets = SocialTool.twitter_search params[:term]
+    @tweets = SocialTool.twitter_search params[:term] || 'rails'
   end
 end

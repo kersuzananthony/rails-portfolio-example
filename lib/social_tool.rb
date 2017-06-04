@@ -1,5 +1,5 @@
 module SocialTool
-  def self.twitter_search terms
+  def self.twitter_search(terms = 'rails')
     client = Twitter::REST::Client.new do |config|
       config.consumer_key        = ENV.fetch('TWITTER_API_KEY')
       config.consumer_secret     = ENV.fetch('TWITTER_SECRET_KEY')
