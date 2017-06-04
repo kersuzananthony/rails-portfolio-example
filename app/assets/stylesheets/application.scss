@@ -16,6 +16,13 @@
   text-align: left;
 }
 
+.application-inner {
+  height: 100%;
+  margin-top: 125px;
+  margin-bottom: 125px;
+  overflow: scroll;
+}
+
 .auth-link a {
   color: black;
 }

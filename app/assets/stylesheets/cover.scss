@@ -71,6 +71,10 @@ body {
   margin-bottom: 0;
 }
 
+.nav-masthead {
+  justify-content: center;
+}
+
 .nav-masthead .nav-link {
   padding: .25rem 0;
   font-weight: bold;
@@ -132,16 +136,17 @@ body {
 @media (min-width: 40em) {
   /* Pull out the header and footer */
   .masthead {
-    position: fixed;
+    position: absolute;
     top: 0;
   }
   .mastfoot {
-    position: fixed;
+    position: absolute;
     bottom: 0;
   }
   /* Start the vertical centering */
   .site-wrapper-inner {
     vertical-align: middle;
+    position: relative;
   }
   /* Handle the widths */
   .masthead,
