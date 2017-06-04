@@ -33,3 +33,16 @@
 .app-nav span {
   margin-right: 15px;
 }
+
+.tech-news {
+  color: black;
+  margin: 20px;
+
+  a {
+    color: green;
+  }
+
+  >.card {
+    padding: 30px;
+  }
+}
