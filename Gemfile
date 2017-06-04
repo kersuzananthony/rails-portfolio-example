@@ -53,6 +53,7 @@ gem 'mini_magick', '~> 4.7'
 gem 'dotenv-rails', '~> 2.2', '>= 2.2.1'
 
 gem 'cocoon', '~> 1.2', '>= 1.2.10'
+gem 'gritter', '~> 1.2'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
