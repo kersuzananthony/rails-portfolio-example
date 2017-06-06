@@ -9,7 +9,11 @@ class BlogsController < ApplicationController
   # GET /blogs
   # GET /blogs.json
   def index
-    @blogs = Blog.most_recent.page(params[:page]).per(5)
+    if logged_in?(:site_admin)
+      @blogs = Blog.most_recent.page(params[:page]).per(5)
+    else
+      @blogs = Blog.published.most_recent.page(params[:page]).per(5)
+    end
   end
 
   # GET /blogs/1
