@@ -6,10 +6,8 @@ jQuery(document).on "turbolinks:load", ->
       channel: 'BlogsChannel',
       blog_id: comments.data 'blog-id'
     },
-    connected ->
-      print('Connected!')
-    disconnected ->
-      print('Disconnected!')
+    connected: ->
+    disconnected: ->
     received: (data) ->
       comments.append data['comment']
     send_comment: (comment, blog_id) ->
@@ -18,10 +16,9 @@ jQuery(document).on "turbolinks:load", ->
   $('#new_comment').submit (e) ->
     $this = $(this)
     textarea = $this.find('#comment_content')
-
     if $.trim(textarea.val()).length > 1
-      App.global_chat.send_comment textarea.valueOf(), comments.data 'blog-id'
+      App.global_chat.send_comment textarea.val(),
+        comments.data('blog-id')
       textarea.val('')
-
     e.preventDefault()
     return false
