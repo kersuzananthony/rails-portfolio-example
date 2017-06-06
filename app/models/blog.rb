@@ -8,7 +8,7 @@ class Blog < ApplicationRecord
   friendly_id :title, use: :slugged
 
   # Validation
-  validates_presence_of :title, :body
+  validates_presence_of :title, :body, :topic_id
 
   # Custom scope
   scope :most_recent, (-> { order(created_at: :desc) })
