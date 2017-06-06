@@ -10,4 +10,6 @@ class Blog < ApplicationRecord
   # Validation
   validates_presence_of :title, :body
 
+  # Custom scope
+  scope :most_recent, (-> { order(created_at: :desc) })
 end
