@@ -2,6 +2,7 @@ class TopicsController < ApplicationController
 
   layout 'blog'
 
+  before_action :set_sidebar_topics
   before_action :set_topic, only: [:show]
 
   def index
@@ -20,5 +21,9 @@ class TopicsController < ApplicationController
 
   def set_topic
     @topic = Topic.find(params[:id])
+  end
+
+  def set_sidebar_topics
+    @sidebar_topics = Topic.with_blogs
   end
 end

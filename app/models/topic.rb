@@ -7,4 +7,8 @@ class Topic < ApplicationRecord
   # Validation
   validates_presence_of :title
 
+  def self.with_blogs
+    includes(:blogs).where.not(blogs: { id: nil })
+  end
+
 end
