@@ -8,6 +8,9 @@ Rails.application.routes.draw do
   resources :portfolios do
     put :sort, on: :collection
   end
+
+  resources :topics, only: [:index, :show]
+
   resources :blogs do
     member do
       get :toggle_status, to: 'blogs#toggle_status'
