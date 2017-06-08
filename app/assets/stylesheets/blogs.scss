@@ -2,6 +2,14 @@
 @import "gritter";
 @import "font-awesome";
 
+* {
+  font-family: 'Lato', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Roboto Slab', serif;
+}
+
 body {
 
 }
@@ -21,7 +29,6 @@ body {
 }
 
 body {
-  font-family: Georgia, "Times New Roman", Times, serif;
   color: #555;
 }
 
@@ -31,7 +38,6 @@ h3, .h3,
 h4, .h4,
 h5, .h5,
 h6, .h6 {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: normal;
   color: #333;
 }
