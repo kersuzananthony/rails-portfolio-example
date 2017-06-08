@@ -4,7 +4,7 @@
   <%= link_to 'Edit', edit_blog_path(@blog) if logged_in?(:site_admin) %>
 
   <p class="blog-content-justify">
-    <%= @blog.body %>
+    <%= markdown @blog.body %>
   </p>
 
   <%= render 'comments/form' %>
